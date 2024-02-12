@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+/**
+* @package  AD/FeedbackSurveyModule
+* @version  1.0.0
+* @author  Kangana
+* @copyright Copyright © 2024. All Rights Reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+  <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+    <arguments>
+      <argument name="collections" xsi:type="array">
+        <item name="customer_feedback_listing_data_source" xsi:type="string">AD\FeedbackSurveyModule\Model\ResourceModel\CustomerFeedbackSurvey\Grid\Collection</item>
+      </argument>
+    </arguments>
+  </type>
+  <virtualType name="AD\FeedbackSurveyModule\Model\ResourceModel\CustomerFeedbackSurvey\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <arguments>
+      <argument name="mainTable" xsi:type="string">customer_feedback_survey</argument>
+      <argument name="resourceModel" xsi:type="string">AD\FeedbackSurveyModule\Model\ResourceModel\CustomerFeedbackSurvey</argument>
+    </arguments>
+  </virtualType>
+  <preference for="AD\FeedbackSurveyModule\Api\CustomerFeedbackInterface" type="AD\FeedbackSurveyModule\Model\Api\CustomerFeedback"/>
+</config>

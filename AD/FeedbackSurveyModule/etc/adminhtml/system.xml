@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @package  AD/FeedbackSurveyModule
+* @version  1.0.0
+* @author  Kangana
+* @copyright Copyright © 2024. All Rights Reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <tab id="feedback" translate="label" sortOrder="10">
+      <label>Feedback</label>
+    </tab>
+    <section id="feedback" translate="label" sortOrder="130" showInDefault="1" showInWebsite="0" showInStore="0">
+      <class>separator-top</class>
+      <label>Customer Survey</label>
+      <tab>feedback</tab>
+      <resource>AD_FeedbackSurveyModule::customersurvey</resource>
+      <group id="customersurvey" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="0" showInStore="0">
+        <label>Customer Survey Configuration</label>
+        <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+          <label>Enable</label>
+          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+      </group>
+    </section>
+  </system>
+</config>

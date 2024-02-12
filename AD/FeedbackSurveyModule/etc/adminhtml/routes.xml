@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* @package  AD/FeedbackSurveyModule
+* @version  1.0.0
+* @author  Kangana
+* @copyright Copyright © 2024. All Rights Reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+ <router id="admin">
+   <route id="feedback" frontName="feedback">
+    <module name="AD_FeedbackSurveyModule" before="Magento_Backend" />
+   </route>
+ </router>
+</config>

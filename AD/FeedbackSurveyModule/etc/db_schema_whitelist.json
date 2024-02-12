@@ -1,0 +1,12 @@
+{
+    "customer_feedback_survey": {
+        "column": {
+            "id": true,
+            "name": true,
+            "feedback": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

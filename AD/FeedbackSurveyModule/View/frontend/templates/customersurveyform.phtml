@@ -1,0 +1,57 @@
+<!--
+/**
+* @package  AD/FeedbackSurveyModule
+* @version  1.0.0
+* @author  Kangana
+* @copyright Copyright © 2024. All Rights Reserved.
+*/
+-->
+<div class="row">
+  <div class="col-md-8">
+    <form name="addData" method="post" id="addData" class="form"
+      action="<?= /* @noEscape */ $block->getFormAction(); ?>"
+      data-hasrequired="<?= $block->escapeHtml(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+      <fieldset class="fieldset">
+        <legend class="legend">
+          <span>
+            <?= $block->escapeHtml(__('Feedback : Customer Survey Form')) ?>
+          </span>
+        </legend>
+        <fieldset class="fieldset row">
+          <div class="fields col-md-6">
+            <div class="field name required">
+              <label class="label" for="title"><span><?= $block->
+                escapeHtml(__('Enter Your Name')) ?></span></label>
+              <div class="control">
+                <input name="name" id="name" title="Name" value="" class="input-text" type="text"
+                   data-validate="{required:true}">
+              </div>
+            </div>
+            <div class="field name required">
+              <label class="label" for="title"><span><?= $block->
+                escapeHtml(__('Feedback')) ?></span></label>
+              <div class="control">
+                <textarea
+                 name="feedback"
+                 id="feedback"
+                 minlength="100"
+                 title="Feedback"
+                 class="input-text"
+                 data-validate="{required:true}"
+                >
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </fieldset>
+      <div class="actions-toolbar">
+        <div class="primary">
+          <button type="submit" class="action submit primary" title="Submit"><span><?= $block->
+            escapeHtml(__('Submit')) ?></span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

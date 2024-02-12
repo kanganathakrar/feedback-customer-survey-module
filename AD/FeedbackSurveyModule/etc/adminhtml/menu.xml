@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @package  AD/FeedbackSurveyModule
+* @version  1.0.0
+* @author  Kangana
+* @copyright Copyright © 2024. All Rights Reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+  <menu>
+    <add id="AD_FeedbackSurveyModule::feedback"
+     title="Feedback"
+     module="AD_FeedbackSurveyModule"
+     sortOrder="51"
+     resource="AD_FeedbackSurveyModule::feedback"
+     dependsOnConfig="feedback/customersurvey/enable" />
+ 
+    <add id="AD_FeedbackSurveyModule::customersurvey"
+     title="Customer Survey"
+     module="AD_FeedbackSurveyModule"
+     sortOrder="10"
+     action="feedback/customer/survey"
+     resource="Magento_Backend::content"
+     parent="AD_FeedbackSurveyModule::feedback"
+     dependsOnConfig="feedback/customersurvey/enable" />
+   </menu>
+</config>

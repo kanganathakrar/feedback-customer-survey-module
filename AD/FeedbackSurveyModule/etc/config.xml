@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @package  AD/FeedbackSurveyModule
+* @version  1.0.0
+* @author  Kangana
+* @copyright Copyright © 2024. All Rights Reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+      <feedback>
+        <customersurvey>
+          <enable>1</enable>
+        </customersurvey>
+      </feedback>
+    </default>
+</config>
